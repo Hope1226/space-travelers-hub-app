@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './assets/stylesheets/App.css';
 import Nav from './components/Nav';
 
 function App() {
