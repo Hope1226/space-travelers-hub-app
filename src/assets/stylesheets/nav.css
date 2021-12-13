@@ -9,11 +9,20 @@ nav {
   gap: 20px;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 nav img {
