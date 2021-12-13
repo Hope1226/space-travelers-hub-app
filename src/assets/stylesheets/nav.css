@@ -1,0 +1,21 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.logo-cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav img {
+  height: 100px;
+}
