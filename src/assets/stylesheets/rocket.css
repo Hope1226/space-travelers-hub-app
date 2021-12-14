@@ -1,0 +1,10 @@
+.rocket {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.rocket img {
+  height: 200px;
+}
