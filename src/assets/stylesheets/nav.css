@@ -26,13 +26,59 @@ nav {
 
 .nav-link:last-child {
   border-left: 1px solid #000;
-
 }
 
 .active {
   text-decoration: underline;
 }
 
-nav img {
+.logo-cont img {
   height: 100px;
+}
+
+.mob-only {
+  display: none;
+  background: transparent;
+}
+
+@media (max-width: 700px) {
+  nav {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    border-bottom: none;
+  }
+
+  .mob-only {
+    display: block;
+  }
+
+  .nav-links {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 20px;
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.3s;
+  }
+
+  .nav-link {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+  .nav-link:last-child {
+    border-left: none;
+  }
+
+  .nav-links > * {
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .open-mob-nav {
+    height: 350px;
+  }
+
 }

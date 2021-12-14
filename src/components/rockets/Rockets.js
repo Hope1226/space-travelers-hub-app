@@ -5,12 +5,13 @@ import Rocket from './Rocket';
 
 const Rockets = () => {
   const dispatch = useDispatch();
+  const rocketsState = useSelector((state) => state.rocketReducer);
 
   useEffect(() => {
-    dispatch(getRockets());
+    if (!rocketsState.length) {
+      dispatch(getRockets());
+    }
   }, []);
-
-  const rocketsState = useSelector((state) => state.rocketReducer);
 
   return (
     <div className="rockets">
