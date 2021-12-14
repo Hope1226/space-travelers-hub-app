@@ -1,5 +1,6 @@
 import React from 'react';
 import uniqid from 'uniqid';
+import PropTypes from 'prop-types';
 
 const Rocket = ({ rocketList }) => (
   <div className="rockets-conatainer">
@@ -18,5 +19,9 @@ const Rocket = ({ rocketList }) => (
     ))}
   </div>
 );
+
+Rocket.propTypes = {
+  rocketList: PropTypes.element.isRequired,
+};
 
 export default Rocket;
