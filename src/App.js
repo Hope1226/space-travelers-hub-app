@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import './assets/stylesheets/App.css';
 import Nav from './components/Nav';
 import Profile from './components/Profile';
 import Rockets from './components/rockets/Rockets';
