@@ -9,7 +9,10 @@ const rocketsReducer = combineReducers({
 
 const mainStore = createStore(
   rocketsReducer,
-  applyMiddleware(thunk, logger),
+  applyMiddleware(
+    thunk,
+    logger,
+  ),
 );
 
 export default mainStore;
