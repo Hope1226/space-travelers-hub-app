@@ -21,9 +21,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
- }
+}
 
-.rocket-info h1, p {
+.rocket-info h1,
+p {
   margin: 0;
 }
 
@@ -64,5 +65,4 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
-
 }

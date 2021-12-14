@@ -10,7 +10,6 @@ const Nav = () => {
 
   const toggleMenu = () => {
     setMobMenuOpen(!mobMenuOpen);
-    console.log(mobMenuOpen);
   };
 
   return (
