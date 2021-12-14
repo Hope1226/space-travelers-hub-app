@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from '../assets/images/logo.png';
 import '../assets/stylesheets/nav.css';
 
@@ -8,11 +9,11 @@ const Nav = () => (
       <img src={Logo} alt="logo" />
       <h1 className="hero-txt">Space Travelers&apos; Hub</h1>
     </div>
-    <ul>
-      <li>Rockets</li>
-      <li>Missions</li>
-      <li>My profile</li>
-    </ul>
+    <div className="nav-links">
+      <NavLink to="/" className="nav-link">Rockets</NavLink>
+      <NavLink to="/missions" className="nav-link">Missions</NavLink>
+      <NavLink to="/profile" className="nav-link">Profile</NavLink>
+    </div>
   </nav>
 );
 
