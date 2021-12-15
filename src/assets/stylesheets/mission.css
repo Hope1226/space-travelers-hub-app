@@ -1,0 +1,8 @@
+.mission-table {
+  border: 1px solid #868686;
+}
+
+.thead {
+  display: grid;
+  grid-template-columns: 25% 30% 20% 25%;
+}
