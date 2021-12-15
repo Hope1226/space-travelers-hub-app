@@ -1,7 +1,7 @@
 .missions-table {
   border: 1px solid #000;
-  width: 98%;
-  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .t-rows {
@@ -9,8 +9,13 @@
   grid-template-columns: 10% 63% 12% 15%;
 }
 
-.t-rows:nth-child(even) {
-  background-color: #696868;
+table > div:nth-child(even) {
+  background-color: #c3c3c3;
+}
+
+tbody {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .p-10 {
