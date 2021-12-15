@@ -1,9 +1,19 @@
-const GET_MISSIONS = 'GET_MISSIONs';
+import axios from 'axios';
 
-export const fetchMissions = (missions) => ({
-  type: GET_MISSIONS,
-  missions,
-});
+const GET_MISSIONS = 'GET_MISSIONs';
+const fetchApi = 'https://api.spacexdata.com/v3/missions';
+
+// export const fetchMissions = (missions) => ({
+//   type: GET_MISSIONS,
+//   missions,
+// });
+
+export const getMissions = async () => {
+  const fetchData = await axios.get(fetchApi);
+  const res = fetchData.data;
+  console.log(res);
+  return res;
+};
 
 const reducer = (state = [], action) => {
   switch (action.type) {
