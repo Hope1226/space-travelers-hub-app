@@ -9,6 +9,10 @@
   grid-template-columns: 10% 63% 12% 15%;
 }
 
+.t-rows:nth-child(even) {
+  background-color: #696868;
+}
+
 .p-10 {
   padding: 10px 5px;
   text-align: justify;
