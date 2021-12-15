@@ -7,7 +7,7 @@ const JoinedMissions = () => {
   const getJoinedMissions = joinedMissions.filter((mission) => mission);
 
   const renderJoinedMissions = getJoinedMissions.map((mission) => (
-    <div key={mission.mission_id}>
+    <div className="joined" key={mission.mission_id}>
       <ul>
         <li>{mission.missionName}</li>
       </ul>

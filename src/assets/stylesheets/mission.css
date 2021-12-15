@@ -62,3 +62,9 @@
   border-color: #eb0606;
   color: #eb0606;
 }
+
+.joined {
+  width: 450px;
+  border: 1px solid #b9b9b9;
+  margin: 0;
+}
