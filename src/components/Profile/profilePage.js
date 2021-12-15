@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ReservedRocket from '../rockets/ReservedRockets';
 import JoinedMissions from './JoinedMissions';
-import '../assets/stylesheets/profile.css';
+import '../../assets/stylesheets/profile.css';
 
 const Profile = () => {
   const rocketState = useSelector((state) => state.rocketReducer);
