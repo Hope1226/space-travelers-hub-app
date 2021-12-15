@@ -1,24 +1,28 @@
 import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const GET_MISSIONS = 'GET_MISSIONs';
+const GET_MISSIONS = 'GET_MISSIONS/fulfilled';
 const fetchApi = 'https://api.spacexdata.com/v3/missions';
 
-// export const fetchMissions = (missions) => ({
-//   type: GET_MISSIONS,
-//   missions,
-// });
-
-export const getMissions = async () => {
-  const fetchData = await axios.get(fetchApi);
-  const res = fetchData.data;
-  console.log(res);
-  return res;
+const initialState = {
+  status: 'empty',
+  missionList: [],
 };
 
-const reducer = (state = [], action) => {
+export const getMissions = createAsyncThunk('GET_MISSIONS', async () => {
+  const fetchData = await axios.get(fetchApi);
+  const result = await fetchData.data;
+  console.log(result);
+  return result;
+});
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
-      return [...state, action.missions];
+      return {
+        status: 'fetched',
+        missionList: [...state.missionList, ...action.payload],
+      };
     default:
       return state;
   }
