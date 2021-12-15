@@ -22,8 +22,12 @@ const Rocket = ({ rocketList }) => {
           </div>
           <div className="rocket-info">
             <h1 className="rocket-name">{rocket.name}</h1>
-            {rocket.reserved ? <span>Reserved</span> : null}
-            <p className="rocket-para">{rocket.info}</p>
+            <p className="rocket-para">
+              {rocket.reserved ? <span className="reserved-txt">Reserved</span> : null}
+              {' '}
+              {' '}
+              {rocket.description}
+            </p>
             <button onClick={reserveRockets} type="button" id={rocket.id} className={rocket.reserved ? 'reserved' : 'not-reserved'}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
