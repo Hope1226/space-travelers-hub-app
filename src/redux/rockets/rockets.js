@@ -1,6 +1,7 @@
 const ADD_ROCKETS = 'rocketStore/rockets/ADD_ROCKETS';
 const RESERVE_ROCKET = 'rocketStore/rockets/RESERVE_ROCKET';
 const ERR_MESSAGE = 'rocketStore/rockets/ERR_MESSAGE';
+const RESERVED_ROCKETS = 'rocketStore/rockets/ERR_MESSAGE';
 const rocketsApi = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = [];
