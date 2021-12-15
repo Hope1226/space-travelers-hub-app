@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissions } from '../redux/missions/missions';
+import { getMissions } from '../../redux/missions/missions';
 import Mission from './Mission';
 
 const Missions = () => {
