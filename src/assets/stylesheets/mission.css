@@ -1,5 +1,5 @@
 .missions-table {
-  border: 1px solid #000;
+  border: 1px solid #888;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -9,8 +9,16 @@
   grid-template-columns: 10% 63% 12% 15%;
 }
 
-table > div:nth-child(even) {
-  background-color: #c3c3c3;
+tbody tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+.t-rows > * {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 tbody {
@@ -32,11 +40,6 @@ tbody {
   border-bottom: 1px solid #888;
 }
 
-.text-center {
-  text-align: center;
-  padding-top: 20px;
-}
-
 .f-14 {
   font-size: 14px;
 }
@@ -55,7 +58,7 @@ tbody {
 
 .btn {
   color: #747474;
-  border: 1px solid #000;
+  border: 1px solid #747474;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
@@ -76,4 +79,15 @@ tbody {
 
 .joined ul li {
   list-style: none;
+}
+
+@media (max-width: 700px) {
+  .t-rows {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+  }
+
+  .no-mob {
+    display: none;
+  }
 }

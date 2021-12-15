@@ -28,28 +28,24 @@ const Mission = (props) => {
   };
 
   return (
-    <div>
-      <tbody className="t-body">
-        <tr className="t-rows">
-          <td className="b-right p-10 f-14"><b>{missionName}</b></td>
-          <td className="b-right p-10 f-14">{description}</td>
-          {
+    <tr className="t-rows">
+      <td className="b-right p-10 f-14 mission-name"><b>{missionName}</b></td>
+      <td className="b-right p-10 f-14">{description}</td>
+      {
                 isJoined() ? (
                   <td className="b-right text-center"><span className="member f-14">NOT A MEMBER</span></td>
                 ) : (
                   <td className="b-right text-center"><span className="member f-14 bg-blue"> ACTIVE MEMBER</span></td>
                 )
             }
-          <td className="b-bottom text-center">
-            { isJoined() ? (
-              <button type="button" className="btn" onClick={handleJoinMission}>JOIN MISSION</button>
-            ) : (
-              <button type="button" className="btn b-red" onClick={handleLeaveMission}>LEAVE MISSION</button>
-            )}
-          </td>
-        </tr>
-      </tbody>
-    </div>
+      <td className="b-bottom text-center">
+        { isJoined() ? (
+          <button type="button" className="btn" onClick={handleJoinMission}>JOIN MISSION</button>
+        ) : (
+          <button type="button" className="btn b-red" onClick={handleLeaveMission}>LEAVE MISSION</button>
+        )}
+      </td>
+    </tr>
   );
 };
 

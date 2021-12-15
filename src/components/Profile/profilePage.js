@@ -20,9 +20,9 @@ const Profile = () => {
         <h2>My Rockets</h2>
         {reserved.length
           ? <ReservedRocket reservedRockets={reserved} />
-          : <h3>No reserved Rockets</h3>}
+          : <ul className="no-missions"><h2>No reserved Rockets</h2></ul>}
       </div>
-      <div className="temp-container">
+      <div className="my-mission-container">
         <h2>My missions</h2>
         <JoinedMissions />
       </div>
