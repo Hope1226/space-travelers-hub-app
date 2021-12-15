@@ -1,5 +1,6 @@
 const ADD_ROCKETS = 'rocketStore/rockets/ADD_ROCKETS';
 const RESERVE_ROCKET = 'rocketStore/rockets/RESERVE_ROCKET';
+const CANCEL_RESERVATION = 'CANCEL_RESERVATION';
 const ERR_MESSAGE = 'rocketStore/rockets/ERR_MESSAGE';
 const rocketsApi = 'https://api.spacexdata.com/v3/rockets';
 
@@ -13,6 +14,11 @@ export const addRokets = (payload) => ({
 
 export const reserveRocket = (payload) => ({
   type: RESERVE_ROCKET,
+  payload,
+});
+
+export const cancelReservation = (payload) => ({
+  type: CANCEL_RESERVATION,
   payload,
 });
 
@@ -48,6 +54,15 @@ const reducer = (state = initialState, action) => {
         if (rocket.id === action.payload) {
           return {
             ...rocket, reserved: !rocket.reserved,
+          };
+        }
+        return rocket;
+      });
+    case CANCEL_RESERVATION:
+      return state.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return {
+            ...rocket, reserved: false,
           };
         }
         return rocket;

@@ -10,13 +10,17 @@ const Profile = () => {
 
   useEffect(() => {
     getReserved();
-  }, []);
+  }, [rocketState]);
 
   return (
     <div className="profile-container">
       {reserved.length
         ? <ReservedRocket reservedRockets={reserved} />
         : <h2>No reserved Rockets</h2>}
+      <div className="temp-container">
+        <h2>My missions</h2>
+        <p>Under construction</p>
+      </div>
     </div>
   );
 };
