@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { joinMission, leaveMission } from '../../redux/missions/missions';
+import '../../assets/stylesheets/mission.css';
 
 const Mission = (props) => {
   const {
@@ -28,9 +29,9 @@ const Mission = (props) => {
 
   return (
     <div>
-      <table>
+      <table className="mission-table">
         <thead>
-          <tr>
+          <tr className="table-title">
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
