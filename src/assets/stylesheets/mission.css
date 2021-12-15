@@ -1,8 +1,45 @@
-.mission-table {
-  border: 1px solid #868686;
+.missions-table {
+  border: 1px solid #000;
+  width: 98%;
+  margin: 20px auto;
 }
 
-.thead {
+.t-rows {
   display: grid;
-  grid-template-columns: 25% 30% 20% 25%;
+  grid-template-columns: 10% 63% 12% 15%;
+}
+
+.p-10 {
+  padding: 10px 5px;
+  text-align: justify;
+}
+
+.b-right {
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.b-bottom {
+  border-bottom: 1px solid #888;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.member {
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+  padding: 2px;
+  color: #fff;
+  background-color: #747474;
+}
+
+.bg-blue {
+  background-color: #51a0c5;
 }
