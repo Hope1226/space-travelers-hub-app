@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ReservedRocket from './rockets/ReservedRockets';
+import '../assets/stylesheets/profile.css';
 
 const Profile = () => {
   const rocketState = useSelector((state) => state.rocketReducer);
@@ -14,9 +15,12 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      {reserved.length
-        ? <ReservedRocket reservedRockets={reserved} />
-        : <h2>No reserved Rockets</h2>}
+      <div className="reserved-rockets">
+        <h2>My Rockets</h2>
+        {reserved.length
+          ? <ReservedRocket reservedRockets={reserved} />
+          : <h3>No reserved Rockets</h3>}
+      </div>
       <div className="temp-container">
         <h2>My missions</h2>
         <p>Under construction</p>

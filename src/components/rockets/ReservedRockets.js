@@ -14,8 +14,7 @@ const ReservedRocket = ({ reservedRockets }) => {
   };
 
   return (
-    <div className="reserved-rockets">
-      <h2>My Rockets</h2>
+    <div className="reserved-rocket">
       <ul>
         {reservedRockets.map((rocket) => (
           <li key={uniqid()} className="resRocket">
