@@ -15,7 +15,6 @@ const initialState = {
 export const getMissions = createAsyncThunk('GET_MISSIONS', async () => {
   const fetchData = await axios.get(fetchApi);
   const result = await fetchData.data;
-  console.log(result);
   return result;
 });
 

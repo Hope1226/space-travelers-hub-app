@@ -7,8 +7,6 @@ const Missions = () => {
   const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missions.missionList);
   const status = useSelector((state) => state.missions.status);
-  console.log(missionList);
-  console.log(status);
 
   useEffect(() => {
     if (status === 'empty') {
