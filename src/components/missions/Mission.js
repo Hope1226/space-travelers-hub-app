@@ -31,7 +31,7 @@ const Mission = (props) => {
     <div>
       <tbody className="t-body">
         <tr className="t-rows">
-          <td className="b-right f-14"><b>{missionName}</b></td>
+          <td className="b-right p-10 f-14"><b>{missionName}</b></td>
           <td className="b-right p-10 f-14">{description}</td>
           {
                 isJoined() ? (
@@ -42,9 +42,9 @@ const Mission = (props) => {
             }
           <td className="b-bottom text-center">
             { isJoined() ? (
-              <button type="button" onClick={handleJoinMission}>JOIN MISSION</button>
+              <button type="button" className="btn" onClick={handleJoinMission}>JOIN MISSION</button>
             ) : (
-              <button type="button" onClick={handleLeaveMission}>LEAVE MISSION</button>
+              <button type="button" className="btn b-red" onClick={handleLeaveMission}>LEAVE MISSION</button>
             )}
           </td>
         </tr>

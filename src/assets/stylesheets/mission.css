@@ -43,3 +43,18 @@
 .bg-blue {
   background-color: #51a0c5;
 }
+
+.btn {
+  color: #747474;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  margin: 10px 0;
+}
+
+.b-red {
+  border-color: #eb0606;
+  color: #eb0606;
+}
