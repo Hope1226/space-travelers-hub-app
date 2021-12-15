@@ -14,7 +14,7 @@ const Rocket = ({ rocketList }) => {
   };
 
   return (
-    <div className="rockets-conatainer">
+    <div className="rockets-container">
       {rocketList.map((rocket) => (
         <div key={uniqid()} className="rocket">
           <div className="rocket-image">

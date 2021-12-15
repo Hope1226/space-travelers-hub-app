@@ -1,4 +1,4 @@
-.rockets-conatainer {
+.rockets-container {
   display: grid;
   grid-template-columns: 1fr;
   padding: 50px 0;
