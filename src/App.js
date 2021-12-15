@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './assets/stylesheets/App.css';
 import Nav from './components/Nav';
-import Profile from './components/Profile';
+import Profile from './components/Profile/profilePage';
 import Missions from './components/missions/MissionsPage';
 import Rockets from './components/rockets/Rockets';
 
