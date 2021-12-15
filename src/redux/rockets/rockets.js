@@ -1,7 +1,6 @@
 const ADD_ROCKETS = 'rocketStore/rockets/ADD_ROCKETS';
 const RESERVE_ROCKET = 'rocketStore/rockets/RESERVE_ROCKET';
 const ERR_MESSAGE = 'rocketStore/rockets/ERR_MESSAGE';
-const RESERVED_ROCKETS = 'rocketStore/rockets/ERR_MESSAGE';
 const rocketsApi = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = [];
@@ -32,6 +31,7 @@ export const getRockets = () => (dispatch) => fetch(`${rocketsApi}`)
         name: rocket.rocket_name,
         description: rocket.description,
         img: rocket.flickr_images[Math.floor(Math.random() * 2)],
+        reserved: false,
       };
       dispatch(addRokets(newRocket));
     });
