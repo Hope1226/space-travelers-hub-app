@@ -16,7 +16,7 @@ Space Traveler' Hub is designed to allow cliant to get latest information about 
 
 ## Live Demo
 
-[Live Demo](https://61ba60fe57c59b8c0777e3b5--friendly-shannon-c7240f.netlify.app/)
+[Live Demo](https://friendly-shannon-c7240f.netlify.app/)
 
 ## Getting Started
 
