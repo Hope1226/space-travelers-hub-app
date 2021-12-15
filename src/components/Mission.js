@@ -5,25 +5,25 @@ import { joinMission, leaveMission } from '../redux/missions/missions';
 
 const Mission = (props) => {
   const {
-    id, joinStatus, missionName, description,
+    id, missionName, description,
   } = props;
   const dispatch = useDispatch();
   const joinedMission = useSelector((state) => state.missions.joinedMissions);
 
-  const handleJoinMission = () => {
-    if (joinStatus.status === false) {
-      joinStatus.status = true;
-      dispatch(joinMission({ id, missionName }));
+  const isJoined = () => {
+    const joined = joinedMission.filter((mission) => mission.id === id);
+    if (joined[0] === undefined) {
+      return true;
     }
+    return false;
+  };
+
+  const handleJoinMission = () => {
+    dispatch(joinMission({ id, missionName }));
   };
 
   const handleLeaveMission = () => {
-    if (joinStatus.status === true) {
-      joinStatus.status = false;
-      dispatch(
-        leaveMission(joinedMission.filter((mission) => mission.id !== id)),
-      );
-    }
+    dispatch(leaveMission(joinedMission.filter((mission) => mission.id !== id)));
   };
 
   return (
@@ -42,17 +42,17 @@ const Mission = (props) => {
             <td>{missionName}</td>
             <td>{description}</td>
             {
-                joinStatus === true ? (
-                  <td><span>ACTIVE MEMBER</span></td>
+                isJoined() ? (
+                  <td><span>NOT A MEMBER</span></td>
                 ) : (
-                  <td><span> NOT A MEMBER</span></td>
+                  <td><span> ACTIVE MEMBER</span></td>
                 )
             }
             <td>
-              { joinStatus === true ? (
-                <button type="button" onClick={handleLeaveMission}>Leave Mission</button>
+              { isJoined() ? (
+                <button type="button" onClick={handleJoinMission}>JOIN Mission</button>
               ) : (
-                <button type="button" onClick={handleJoinMission}>Join Mission</button>
+                <button type="button" onClick={handleLeaveMission}>LEAVE Mission</button>
               )}
             </td>
           </tr>
@@ -64,8 +64,6 @@ const Mission = (props) => {
 
 Mission.propTypes = {
   id: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  joinStatus: PropTypes.object.isRequired,
   missionName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
