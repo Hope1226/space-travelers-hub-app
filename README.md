@@ -71,7 +71,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 This is a project done during group work project within React / Redux Module at **[Microverse](https://www.microverse.org/)**, a remote web-developer school, using their support and frameworks provided.<br>
-For this website, we used the [forkify API](https://api.spacexdata.com/v3/).
+For this website, we used the [spaceX API](https://api.spacexdata.com/v3/).
 
 ## 📝 License
 
