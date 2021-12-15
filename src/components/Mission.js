@@ -17,6 +17,15 @@ const Mission = (props) => {
     }
   };
 
+  const handleLeaveMission = () => {
+    if (joinStatus.status === true) {
+      joinStatus.status = false;
+      dispatch(
+        leaveMission(joinedMission.filter((mission) => mission.id !== id)),
+      );
+    }
+  };
+
   return (
     <div>
       <table>
