@@ -68,3 +68,7 @@
   border: 1px solid #b9b9b9;
   margin: 0;
 }
+
+.joined ul li {
+  list-style: none;
+}
