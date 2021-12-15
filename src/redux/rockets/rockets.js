@@ -1,6 +1,7 @@
 const ADD_ROCKETS = 'rocketStore/rockets/ADD_ROCKETS';
 const RESERVE_ROCKET = 'rocketStore/rockets/RESERVE_ROCKET';
 const ERR_MESSAGE = 'rocketStore/rockets/ERR_MESSAGE';
+const rocketsApi = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = [];
 
@@ -18,6 +19,22 @@ export const reserveRocket = (payload) => ({
 export const handleErr = () => ({
   type: ERR_MESSAGE,
 });
+
+// async functions
+
+export const getRockets = () => (dispatch) => fetch(`${rocketsApi}`)
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((rocket) => {
+      const newRocket = {
+        id: rocket.id,
+        name: rocket.rocket_name,
+        description: rocket.description,
+        img: rocket.flickr_images[Math.floor(Math.random() * 2)],
+      };
+      dispatch(addRokets(newRocket));
+    });
+  });
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
