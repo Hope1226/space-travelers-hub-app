@@ -30,11 +30,13 @@ const Missions = () => {
           <tr className="t-rows">
             <th className="mission p-10 b-right">Mission</th>
             <th className="description p-10 b-right">Description</th>
-            <th className="status p-10 b-right">Status</th>
-            <th className="b-bottom p-10 "> </th>
+            <th className="status p-10 b-right no-mob">Status</th>
+            <th className="b-bottom p-10 no-mob"> </th>
           </tr>
         </thead>
-        {mission}
+        <tbody>
+          {mission}
+        </tbody>
       </table>
     </div>
   );
