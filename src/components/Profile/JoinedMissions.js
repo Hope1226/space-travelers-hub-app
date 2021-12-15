@@ -16,7 +16,6 @@ const JoinedMissions = () => {
 
   return (
     <div>
-      <h1>My Missions</h1>
       {renderJoinedMissions}
     </div>
   );
