@@ -19,6 +19,12 @@ const Mission = (props) => {
           <tr>
             <td>{missionName}</td>
             <td>{description}</td>
+            <td>
+              NOT A MEMBER
+            </td>
+            <td>
+              <button type="button">Join Mission</button>
+            </td>
           </tr>
         </tbody>
       </table>
