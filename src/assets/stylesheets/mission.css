@@ -1,0 +1,74 @@
+.missions-table {
+  border: 1px solid #000;
+  width: 98%;
+  margin: 20px auto;
+}
+
+.t-rows {
+  display: grid;
+  grid-template-columns: 10% 63% 12% 15%;
+}
+
+.t-rows:nth-child(even) {
+  background-color: #696868;
+}
+
+.p-10 {
+  padding: 10px 5px;
+  text-align: justify;
+}
+
+.b-right {
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.b-bottom {
+  border-bottom: 1px solid #888;
+}
+
+.text-center {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.member {
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+  padding: 2px;
+  color: #fff;
+  background-color: #747474;
+}
+
+.bg-blue {
+  background-color: #51a0c5;
+}
+
+.btn {
+  color: #747474;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background: none;
+  margin: 10px 0;
+}
+
+.b-red {
+  border-color: #eb0606;
+  color: #eb0606;
+}
+
+.joined {
+  width: 450px;
+  border: 1px solid #b9b9b9;
+  margin: 0;
+}
+
+.joined ul li {
+  list-style: none;
+}

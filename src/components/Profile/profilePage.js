@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import ReservedRocket from './rockets/ReservedRockets';
-import '../assets/stylesheets/profile.css';
+import ReservedRocket from '../rockets/ReservedRockets';
+import JoinedMissions from './JoinedMissions';
+import '../../assets/stylesheets/profile.css';
 
 const Profile = () => {
   const rocketState = useSelector((state) => state.rocketReducer);
@@ -23,7 +24,7 @@ const Profile = () => {
       </div>
       <div className="temp-container">
         <h2>My missions</h2>
-        <p>Under construction</p>
+        <JoinedMissions />
       </div>
     </div>
   );
