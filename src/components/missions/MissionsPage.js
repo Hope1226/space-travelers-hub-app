@@ -24,8 +24,18 @@ const Missions = () => {
   ));
 
   return (
-    <div>
-      {mission}
+    <div className="missions">
+      <table className="missions-table">
+        <thead>
+          <tr className="t-rows">
+            <th className="mission p-10 b-right">Mission</th>
+            <th className="description p-10 b-right">Description</th>
+            <th className="status p-10 b-right">Status</th>
+            <th className="b-bottom p-10 "> </th>
+          </tr>
+        </thead>
+        {mission}
+      </table>
     </div>
   );
 };
