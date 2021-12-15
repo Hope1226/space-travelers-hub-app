@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 700px) {
- .profile-container {
-   flex-direction: column;
- } 
+  .profile-container {
+    flex-direction: column;
+  }
 }
