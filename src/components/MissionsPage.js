@@ -20,7 +20,6 @@ const Missions = () => {
     <Mission
       key={mission.mission_id}
       id={mission.mission_id}
-      joinStatus={{ status: false }}
       missionName={mission.mission_name}
       description={mission.description}
     />
