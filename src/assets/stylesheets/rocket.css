@@ -38,6 +38,7 @@ p {
 .not-reserved {
   color: white;
   background: #0290ff;
+  border: none;
 }
 
 .reserved {
