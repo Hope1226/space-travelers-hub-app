@@ -1,0 +1,82 @@
+.profile-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.profile-container > * {
+  flex: 1;
+}
+
+.reserved-rockets {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.reserved-rocket ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8e8e8;
+}
+
+.reserved-rocket ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  font-size: 20px;
+}
+
+.reserved-rocket ul li button {
+  padding: 20px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #8f8e8e;
+  background: white;
+  border: 1px solid #8f8e8e;
+}
+
+.my-mission-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.my-mission-container div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.my-mission-container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8e8e8;
+}
+
+.my-mission-container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+  font-size: 20px;
+}
+
+.no-missions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8f8e8e;
+  border: 1px solid #e8e8e8;
+}
+
+@media (max-width: 700px) {
+  .profile-container {
+    flex-direction: column;
+  }
+}

@@ -1,57 +1,60 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# React / Redux - Group Work: Space Travelers' Hub
 
-> One paragraph statement about the project.
+> This app provides information about the rockets and missions avaliable at [SpaceX](https://www.spacex.com/).
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/assets/images/screen.png)
 
-Additional description about the project and its features.
+Space Traveler' Hub is designed to allow cliant to get latest information about the space rockets and missions availiabele at [SpaceX](https://www.spacex.com/). The app allows user to reserve one or several rockets as well as join one or several space missions. All reservations and missions can be canceled by pressing the respective buttons. All reserved rockets and joined missions can also be monitored in a Profile section.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: JavaScript, HTML & CSS;
+- Frameworks: React / Redux
+- Technologies used: GitFlow, GitHub, Terminal
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo](https://friendly-shannon-c7240f.netlify.app/)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Install or update on your local terminal the node.js package.
+
 ### Setup
+
+To get a local copy up and running follow these simple steps.
+
+To setup the Space Travelers' Hub project in your local, in the repo page:
+click on code (dropdown list) > Download as ZIP;
+or open terminal of path you want to install project and run this command <br>
+`git clone git@github.com:Hope1226/space-travelers-hub-app.git`
 
 ### Install
 
-### Usage
+Run in your terminal the following commands:
 
-### Run tests
-
-### Deployment
-
-
+**`$ cd space-travelers-hub-app/`**<br>
+**`$ npm install`**<br>
+**`$ npm run build`**<br>
+**`$ npm start`**
 
 ## Authors
 
-👤 **Author1**
+👤 **Ntwali Josue**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Ntwali-Josue](https://github.com/Ntwali-Josue)
+- Twitter: [@JosueNtwali](https://twitter.com/JosueNtwali)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/karangwa/)
 
-👤 **Author2**
+👤 **Umidjon Ustabaev (Hope)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+- GitHub: [@Hope1226](https://github.com/Hope1226)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
@@ -59,7 +62,7 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Hope1226/space-travelers-hub-app/issues).
 
 ## Show your support
 
@@ -67,9 +70,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+This is a project done during group work project within React / Redux Module at **[Microverse](https://www.microverse.org/)**, a remote web-developer school, using their support and frameworks provided.<br>
+For this website, we used the [spaceX API](https://api.spacexdata.com/v3/).
 
 ## 📝 License
 
