@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  grid-gap: 10px;
 }
 
 .reserved-rocket ul {
@@ -22,8 +23,9 @@
 }
 
 .reserved-rocket ul li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 10px;
   align-items: center;
   padding: 10px;
   border: 1px solid #e8e8e8;
@@ -31,7 +33,7 @@
 }
 
 .reserved-rocket ul li button {
-  padding: 20px 10px;
+  padding: 10px;
   font-size: 16px;
   border-radius: 5px;
   color: #8f8e8e;
@@ -43,6 +45,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  grid-gap: 10px;
 }
 
 .my-mission-container div {
@@ -75,8 +78,17 @@
   border: 1px solid #e8e8e8;
 }
 
+.reserved-rocket ul li .viewBtn {
+  color: white;
+  background: #0290ff;
+}
+
 @media (max-width: 700px) {
   .profile-container {
     flex-direction: column;
+  }
+
+  .reserved-rocket ul .resRocket {
+    grid-template-columns: 1fr;
   }
 }

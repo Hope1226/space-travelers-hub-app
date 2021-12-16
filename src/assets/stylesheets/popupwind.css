@@ -1,0 +1,136 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.562);
+  backdrop-filter: blur(8px);
+}
+
+.popup-details {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background: #d8d8d8;
+}
+
+.popup-details::-webkit-scrollbar {
+  display: none;
+}
+
+.closeBtn {
+  justify-self: end;
+  font-size: 10px;
+  background: transparent;
+  color: #0290ff;
+  border: none;
+  padding: 20px 20px 0 0;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+}
+
+.rocket-info-pop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: white;
+  padding: 10px;
+}
+
+.rocket-info-pop img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.rocket-det {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rocket-info-pop h2 {
+  color: #0290ff;
+  font-size: 40px;
+}
+
+.rocket-info-pop p {
+  text-align: justify;
+  color: #5f5f5f;
+  line-height: 30px;
+}
+
+.rocket-info-pop h3 {
+  color: #5f5f5f;
+  font-size: 25px;
+}
+
+.rocket-info-pop ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-info-pop ul li {
+  color: #5f5f5f;
+  padding: 10px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.actions a {
+  text-decoration: none;
+  padding: 10px 40px 10px 10px;
+  background: #51acd6 url(../images/link_white_24dp.svg) 90% 50% no-repeat;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.actions button {
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+@media (max-width: 700px) {
+  .popup-details {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .rocket-info-pop {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .rocket-info-pop img {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .rocket-info-pop .rocket-det {
+    padding: 10px;
+  }
+}

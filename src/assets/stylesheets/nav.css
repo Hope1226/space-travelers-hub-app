@@ -51,6 +51,7 @@ nav {
 
   .mob-only {
     display: block;
+    border: none;
   }
 
   .nav-links {

@@ -4,7 +4,7 @@ import uniqid from 'uniqid';
 import PropTypes from 'prop-types';
 import { cancelReservation } from '../../redux/rockets/rockets';
 
-const ReservedRocket = ({ reservedRockets }) => {
+const ReservedRocket = ({ reservedRockets, viewFunc }) => {
   const dispatch = useDispatch();
 
   const removeCanceled = (e) => {
@@ -19,6 +19,7 @@ const ReservedRocket = ({ reservedRockets }) => {
         {reservedRockets.map((rocket) => (
           <li key={uniqid()} className="resRocket">
             <p>{rocket.name}</p>
+            <button type="button" className="viewBtn" id={rocket.id} onClick={viewFunc}>View the Rocket</button>
             <button id={rocket.id} type="button" onClick={removeCanceled}>Cancel Reservation</button>
           </li>
         ))}
@@ -29,6 +30,8 @@ const ReservedRocket = ({ reservedRockets }) => {
 
 ReservedRocket.propTypes = {
   reservedRockets: PropTypes.element.isRequired,
+  viewFunc: PropTypes.func.isRequired,
+
 };
 
 export default ReservedRocket;
