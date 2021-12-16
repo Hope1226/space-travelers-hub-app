@@ -1,7 +1,7 @@
 .rockets-container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 50px 0;
+  padding: 50px 20px;
   grid-gap: 30px;
 }
 

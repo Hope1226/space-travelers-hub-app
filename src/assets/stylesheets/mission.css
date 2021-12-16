@@ -1,3 +1,7 @@
+.missions {
+  padding: 20px;
+}
+
 .missions-table {
   border: 1px solid #888;
   border-collapse: separate;
