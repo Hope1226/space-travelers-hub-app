@@ -18,6 +18,10 @@ Space Traveler' Hub is designed to allow cliant to get latest information about 
 
 [Live Demo](https://friendly-shannon-c7240f.netlify.app/)
 
+## Video Demo
+
+![recording](https://netlify-cocoon.netlify.app/.netlify/functions/fetch?code=307&path=eyJzaXRlX2lkIjoiZWI2NDRjYjgtMDUzMS00MGE0LThkYWItM2EwZjE0OGU4ODhmIiwiZGVwbG95X2lkIjoiNjFiYmFjNjA0NmM3ZjgwMDA3Zjc1NjUxIiwiaWQiOiJhYzM4MGM0OS03MDE4LTQyNTctOWQ5ZC02YzQ5YWRmOWYzZWQifQ==)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
