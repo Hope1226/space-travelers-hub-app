@@ -13,7 +13,6 @@
 
 .popup-details {
   width: 80%;
-  background: white;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -24,7 +23,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background: #b9b9b9;
+  background: #d8d8d8;
 }
 
 .popup-details::-webkit-scrollbar {
@@ -35,7 +34,7 @@
   justify-self: end;
   font-size: 10px;
   background: transparent;
-  color: white;
+  color: #0290ff;
   border: none;
   padding: 20px 20px 0 0;
 }
