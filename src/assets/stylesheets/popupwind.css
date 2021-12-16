@@ -109,9 +109,6 @@
 }
 
 .actions button {
-  color: #8f8e8e;
-  background: white;
-  border: 1px solid #8f8e8e;
   border-radius: 5px;
   padding: 0 10px;
 }
@@ -122,6 +119,7 @@
     height: 100%;
     border-radius: 0;
   }
+
   .rocket-info-pop {
     grid-template-columns: 1fr;
     padding: 0;
@@ -133,8 +131,6 @@
   }
 
   .rocket-info-pop .rocket-det {
-    padding: 
-    10px;
+    padding: 10px;
   }
-
 }

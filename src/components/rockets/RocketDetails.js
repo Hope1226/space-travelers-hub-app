@@ -1,11 +1,15 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import { reserveRocket } from '../../redux/rockets/rockets';
 import '../../assets/stylesheets/popupwind.css';
 
 const RocketDetails = ({
-  rocketId, rocketList, cancelFunc, closeFunc,
+  rocketId, closeFunc,
 }) => {
-  const fileteredList = rocketList.filter((rocket) => rocket.id === Number(rocketId));
+  const dispatch = useDispatch();
+  const rocketsStore = useSelector((state) => state.rocketReducer);
+  const fileteredList = rocketsStore.filter((rocket) => rocket.id === Number(rocketId));
 
   return (
     <div className="wrapper">
@@ -43,7 +47,7 @@ const RocketDetails = ({
             </ul>
             <div className="actions">
               <a href={fileteredList[0].wiki_link} className="wiki-link" target="_balnk">See more</a>
-              <button type="button" onClick={cancelFunc}>Cancel Reservation</button>
+              <button type="button" onClick={() => dispatch(reserveRocket(fileteredList[0].id))} className={fileteredList[0].reserved ? 'reserved' : 'not-reserved'}>{fileteredList[0].reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
             </div>
           </div>
         </div>
@@ -54,8 +58,6 @@ const RocketDetails = ({
 
 RocketDetails.propTypes = {
   rocketId: PropTypes.element.isRequired,
-  rocketList: PropTypes.element.isRequired,
-  cancelFunc: PropTypes.func.isRequired,
   closeFunc: PropTypes.func.isRequired,
 };
 
