@@ -1,15 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { leaveMission } from '../../redux/missions/missions';
 
 const JoinedMissions = () => {
   const joinedMissions = useSelector((state) => state.missions.joinedMissions);
+  const dispatch = useDispatch();
 
-  const getJoinedMissions = joinedMissions.filter((mission) => mission);
+  const handleLeaveMission = (id) => {
+    dispatch(leaveMission(joinedMissions.filter((mission) => mission.id !== id)));
+  };
 
   return (
-    <ul className={getJoinedMissions.length ? ' ' : 'no-missions'}>
-      {getJoinedMissions.length ? getJoinedMissions.map((mission) => (
-        <li key={mission.mission_id}>{mission.missionName}</li>
+    <ul className={joinedMissions.length ? ' ' : 'no-missions'}>
+      {joinedMissions.length ? joinedMissions.map((mission) => (
+        <li key={mission.mission_id}>
+          {mission.missionName}
+          <button type="button" className="viewBtn">View the mission</button>
+          <button type="button" onClick={() => handleLeaveMission(mission.id)}>Leave the mission</button>
+        </li>
       )) : <h2>No missions joined</h2>}
     </ul>
   );
