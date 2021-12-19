@@ -15,7 +15,7 @@ const JoinedMissions = () => {
       {joinedMissions.length ? joinedMissions.map((mission) => (
         <li key={mission.mission_id}>
           {mission.missionName}
-          <button type="button" className="viewBtn">View the mission</button>
+          <a href={mission.wikiLink} className="wiki-link" target="_blank" rel="noreferrer">See more</a>
           <button type="button" onClick={() => handleLeaveMission(mission.id)}>Leave the mission</button>
         </li>
       )) : <h2>No missions joined</h2>}

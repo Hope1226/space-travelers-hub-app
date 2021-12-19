@@ -20,6 +20,7 @@ const Missions = () => {
       id={mission.mission_id}
       missionName={mission.mission_name}
       description={mission.description}
+      wikiLink={mission.wikipedia}
     />
   ));
 

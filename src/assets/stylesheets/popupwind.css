@@ -99,7 +99,7 @@
   gap: 20px;
 }
 
-.actions a {
+.profile-container a {
   text-decoration: none;
   padding: 10px 40px 10px 10px;
   background: #51acd6 url(../images/link_white_24dp.svg) 90% 50% no-repeat;
