@@ -32,7 +32,7 @@
   font-size: 20px;
 }
 
-.reserved-rocket ul li button {
+button {
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
@@ -62,10 +62,11 @@
 }
 
 .my-mission-container ul li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 10px;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid #e8e8e8;
   font-size: 20px;
 }
@@ -76,9 +77,10 @@
   align-items: center;
   color: #8f8e8e;
   border: 1px solid #e8e8e8;
+  padding: 40px;
 }
 
-.reserved-rocket ul li .viewBtn {
+.viewBtn {
   color: white;
   background: #0290ff;
 }
