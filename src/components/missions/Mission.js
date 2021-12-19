@@ -6,7 +6,7 @@ import '../../assets/stylesheets/mission.css';
 
 const Mission = (props) => {
   const {
-    id, missionName, description,
+    id, missionName, description, wikiLink,
   } = props;
   const dispatch = useDispatch();
   const joinedMission = useSelector((state) => state.missions.joinedMissions);
@@ -20,7 +20,7 @@ const Mission = (props) => {
   };
 
   const handleJoinMission = () => {
-    dispatch(joinMission({ id, missionName }));
+    dispatch(joinMission({ id, missionName, wikiLink }));
   };
 
   const handleLeaveMission = () => {
@@ -53,6 +53,7 @@ Mission.propTypes = {
   id: PropTypes.string.isRequired,
   missionName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  wikiLink: PropTypes.string.isRequired,
 };
 
 export default Mission;
